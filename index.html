@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Class Scheduling System</title>
+</head>
+<body>
+  <h2>Class Scheduling System</h2>
+
+  <!-- Simple Form -->
+  <form id="classForm">
+    <input id="code" placeholder="Class Code" required><br>
+    <input id="course" placeholder="Course Name" required><br>
+    <select id="day">
+      <option>Monday</option><option>Tuesday</option><option>Wednesday</option>
+      <option>Thursday</option><option>Friday</option><option>Saturday</option>
+    </select><br>
+    <input id="start" type="time" required><br>
+    <input id="end" type="time" required><br>
+    <input id="instructor" placeholder="Instructor"><br>
+    <button type="submit">Add / Update</button>
+    <button type="button" id="resetBtn">Reset</button>
+  </form>
+
+  <hr>
+
+  <input id="search" placeholder="Search class...">
+  <button id="filterFriday">Filter: Friday</button>
+  <button id="clearFilter">Clear Filter</button>
+  <button id="sortCode">Sort: Code ⤴</button>
+  <button id="sortTime">Sort: Start Time ⤴</button>
+  <button id="tableViewBtn">Table View</button>
+  <button id="cardViewBtn">Card View</button>
+
+  <div id="list"></div>
+  <div id="summary"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
