@@ -3,37 +3,138 @@
 <head>
   <meta charset="UTF-8">
   <title>Class Scheduling System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      margin: 0;
+      padding-top: 30px;
+    }
+
+    .container {
+      background: #fff;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 800px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 15px;
+    }
+
+    input, select, button {
+      padding: 8px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    hr {
+      margin: 20px 0;
+    }
+
+    #search, #filterFriday, #clearFilter, #sortCode, #sortTime, #tableViewBtn, #cardViewBtn {
+      margin: 4px 2px;
+    }
+
+    #list {
+      margin-top: 15px;
+    }
+
+    #summary {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: center;
+    }
+
+    th {
+      background-color: #f0f2f5;
+    }
+
+    .card {
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 10px;
+      margin: 8px 0;
+      background: #fdfdfd;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    .evening {
+      color: #d9534f;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-  <h2>Class Scheduling System</h2>
+  <div class="container">
+    <h2>Class Scheduling System</h2>
 
-  <!-- Simple Form -->
-  <form id="classForm">
-    <input id="code" placeholder="Class Code" required><br>
-    <input id="course" placeholder="Course Name" required><br>
-    <select id="day">
-      <option>Monday</option><option>Tuesday</option><option>Wednesday</option>
-      <option>Thursday</option><option>Friday</option><option>Saturday</option>
-    </select><br>
-    <input id="start" type="time" required><br>
-    <input id="end" type="time" required><br>
-    <input id="instructor" placeholder="Instructor"><br>
-    <button type="submit">Add / Update</button>
-    <button type="button" id="resetBtn">Reset</button>
-  </form>
+   
+    <form id="classForm">
+      <input id="code" placeholder="Class Code" required>
+      <input id="course" placeholder="Course Name" required>
+      <select id="day">
+        <option>Monday</option><option>Tuesday</option><option>Wednesday</option>
+        <option>Thursday</option><option>Friday</option><option>Saturday</option>
+      </select>
+      <input id="start" type="time" required>
+      <input id="end" type="time" required>
+      <input id="instructor" placeholder="Instructor">
+      <button type="submit">Add / Update</button>
+      <button type="button" id="resetBtn">Reset</button>
+    </form>
 
-  <hr>
+    <hr>
 
-  <input id="search" placeholder="Search class...">
-  <button id="filterFriday">Filter: Friday</button>
-  <button id="clearFilter">Clear Filter</button>
-  <button id="sortCode">Sort: Code ⤴</button>
-  <button id="sortTime">Sort: Start Time ⤴</button>
-  <button id="tableViewBtn">Table View</button>
-  <button id="cardViewBtn">Card View</button>
+    <input id="search" placeholder="Search class...">
+    <button id="filterFriday">Filter: Friday</button>
+    <button id="clearFilter">Clear Filter</button>
+    <button id="sortCode">Sort: Code ⤴</button>
+    <button id="sortTime">Sort: Start Time ⤴</button>
+    <button id="tableViewBtn">Table View</button>
+    <button id="cardViewBtn">Card View</button>
 
-  <div id="list"></div>
-  <div id="summary"></div>
+    <div id="list"></div>
+    <div id="summary"></div>
+  </div>
 
   <script src="app.js"></script>
 </body>
